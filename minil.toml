@@ -1,7 +1,7 @@
 name = "BettingStrategy-MonteCarlo"
-# badges = ["travis-ci.com"]
+badges = ["travis", "codecov", "metacpan"]
 authority="cpan:NQOUNET"
 
 module_maker="ModuleBuildTiny"
 static_install = "auto"
-
+markdown_maker = "Pod::Markdown::Github"

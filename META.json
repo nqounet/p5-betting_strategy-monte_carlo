@@ -42,17 +42,29 @@
       },
       "runtime" : {
          "requires" : {
+            "Moo" : "0",
             "perl" : "5.008001"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.98"
+            "Test2::V0" : "0"
          }
       }
    },
    "release_status" : "unstable",
-   "version" : "0.01",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/nqounet/p5-betting_strategy-monte_carlo/issues"
+      },
+      "homepage" : "https://github.com/nqounet/p5-betting_strategy-monte_carlo",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/nqounet/p5-betting_strategy-monte_carlo.git",
+         "web" : "https://github.com/nqounet/p5-betting_strategy-monte_carlo"
+      }
+   },
+   "version" : "v0.1.0",
    "x_authority" : "cpan:NQOUNET",
    "x_serialization_backend" : "JSON::PP version 4.02",
    "x_static_install" : 1
