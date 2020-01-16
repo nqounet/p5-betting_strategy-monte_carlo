@@ -54,15 +54,30 @@ __END__
 
 =head1 NAME
 
-BettingStrategy::MonteCarlo - It's new $module
+BettingStrategy::MonteCarlo - Monte Carlo method for gambling.
 
 =head1 SYNOPSIS
 
     use BettingStrategy::MonteCarlo;
+    my $strategy = BettingStrategy::MonteCarlo->new(+{magnification => 2});
+    my $cash     = 100;
+    while (!$strategy->is_finished) {
+        my $bet = $strategy->bet;
+        last if $cash < $bet;
+        $cash -= $bet;
+        if (rand 2 < 1) {
+            $cash += $bet * 2;
+            $strategy->won;
+        }
+        else {
+            $strategy->lost;
+        }
+    }
+    print $cash;
 
 =head1 DESCRIPTION
 
-BettingStrategy::MonteCarlo is ...
+Monte Carlo is one of betting strategy.
 
 =head1 LICENSE
 
@@ -76,4 +91,3 @@ it under the same terms as Perl itself.
 nqounet E<lt>mail@nqou.netE<gt>
 
 =cut
-
